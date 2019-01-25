@@ -25,13 +25,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         label.text = "Code Label"
         view.addSubview(label)
         
-        let button:UIButton = UIButton(frame: CGRect(x: 20, y: 100, width: 100, height: 20))
+        let button:UIButton = UIButton(frame: CGRect(x: 20, y: 100, width: 300, height: 30))
         
         button.setTitle("Code Button", for: .normal)
         button.backgroundColor = UIColor.black
+        button.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
         view.addSubview(button)
     }
     
+    @objc func buttonPress(){
+        print("button pressed!")
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int { //components for columns
         return data.count //will return one column
     }
