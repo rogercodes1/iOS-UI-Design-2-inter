@@ -18,11 +18,12 @@ class WebVC: UIViewController {
     }
     
     @IBAction func showWebContent(_ sender: Any) {
-        let url = URL(string: "https://google.com")
-        let safariVC = SFSafariViewController(url: url!)
-        present(safariVC, animated: true){
-            print("presented")
-        }
+        let url = URL(string: "https://rogerperez.us")
+//        let safariVC = SFSafariViewController(url: url!)
+//        present(safariVC, animated: true){
+//            print("presented")
+//        }
+        UIApplication.shared.open(url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: nil)
     }
     
     
