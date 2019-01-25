@@ -11,7 +11,12 @@ import UIKit
 class SliderVC: UIViewController {
 
     
+    @IBOutlet weak var segmentLabel: UILabel!
+    
     @IBOutlet weak var progBar: UIProgressView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,20 @@ class SliderVC: UIViewController {
         
     }
     
+    
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        if (sender.isOn){
+            activityIndicator.startAnimating()
+        }
+        else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
+    @IBAction func segmentSelected(_ sender: UISegmentedControl) {
+        
+        segmentLabel.text = sender.titleForSegment(at: sender.selectedSegmentIndex)
+    }
     
 
     /*
