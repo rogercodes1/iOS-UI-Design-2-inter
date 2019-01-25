@@ -10,7 +10,9 @@ import UIKit
 
 class TableVC: UIViewController, UITableViewDataSource {
 
-    let data:[String] = ["item1", "item2", "item3"]
+    let data:[[String]] = [["item1", "item2", "item3"],
+                           ["item A", "item B", "item B", "itemD"]
+    ]
     
 
     override func viewDidLoad() {
@@ -20,12 +22,15 @@ class TableVC: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return data[section].count
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.section][indexPath.row]
         return cell
     }
     
