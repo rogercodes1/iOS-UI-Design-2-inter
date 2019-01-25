@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MiddleVC.swift
 //  iOS-ui-design-intermediate
 //
 //  Created by Roger Perez on 1/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class MiddleVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
     
     let data:[[String]] = [
