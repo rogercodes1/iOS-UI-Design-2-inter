@@ -27,9 +27,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pV-0Z-o6V">
-                                <rect key="frame" x="164" y="267" width="46" height="30"/>
+                                <rect key="frame" x="106" y="267" width="162" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Working w/ Views Table"/>
                                 <connections>
                                     <segue destination="LxT-l8-Cy1" kind="show" id="FMa-YF-GCg"/>
                                 </connections>
