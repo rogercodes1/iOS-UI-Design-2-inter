@@ -21,6 +21,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let label:UILabel = UILabel(frame: CGRect(x: 20, y: 40, width: 300, height: 20))
+        label.text = "Code Label"
+        view.addSubview(label)
+        
+        let button:UIButton = UIButton(frame: CGRect(x: 20, y: 100, width: 100, height: 20))
+        
+        button.setTitle("Code Button", for: .normal)
+        button.backgroundColor = UIColor.black
+        view.addSubview(button)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int { //components for columns
