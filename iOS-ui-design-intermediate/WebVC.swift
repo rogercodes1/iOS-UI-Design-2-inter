@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class WebVC: UIViewController {
 
@@ -15,6 +16,15 @@ class WebVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func showWebContent(_ sender: Any) {
+        let url = URL(string: "https://google.com")
+        let safariVC = SFSafariViewController(url: url!)
+        present(safariVC, animated: true){
+            print("presented")
+        }
+    }
+    
     
 
     /*
