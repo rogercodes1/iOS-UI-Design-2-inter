@@ -9,7 +9,8 @@
 import UIKit
 
 class TableVC: UIViewController, UITableViewDataSource {
- 
+
+    let data:[String] = ["item1", "item2", "item3"]
     
 
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class TableVC: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Cell Item"
+        cell.textLabel?.text = data[indexPath.row]
         return cell
     }
     
