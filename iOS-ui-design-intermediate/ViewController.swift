@@ -18,6 +18,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var label: UILabel!
     
+    @IBAction func showAlert(_ sender: Any) {
+        let titleText:String = "Greetings"
+        let messageText:String = "You've created your first alert"
+        
+        let alert:UIAlertController = UIAlertController(title: titleText, message: messageText , preferredStyle: .actionSheet)
+        let action1:UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(_:UIAlertAction) in
+            print("cancel handler")
+        })
+        let action2:UIAlertAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(_:UIAlertAction) in
+            print("Delete handler")
+        })
+        alert.addAction(action1)
+        alert.addAction(action2)
+
+        
+        self.present(alert, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
