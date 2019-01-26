@@ -10,9 +10,9 @@ import UIKit
 
 class TableVC: UIViewController, UITableViewDataSource {
 
-    let data:[[String]] = [["item1", "item2", "item3"],
-                           ["item A", "item B", "item B", "itemD"]
-    ]
+    let data:[String] = ["item1", "item2", "item3"]
+    let subs:[String] = ["sub1","sub2","sub3"]
+    
     let titles:[String] = ["First", "Second"]
 
     override func viewDidLoad() {
@@ -22,18 +22,22 @@ class TableVC: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return titles[section]
+//        titles[section]
+        return "Roger Roger"
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].count
+//        data[section].count
+        return data.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.section][indexPath.row]
+        cell.textLabel?.text = data[indexPath.row]
+        cell.detailTextLabel?.text = subs[indexPath.row]
+        cell.imageView?.image = UIImage(named: "roger")
         return cell
     }
     
