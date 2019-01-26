@@ -14,7 +14,7 @@ class TableVC: UIViewController, UITableViewDataSource {
     let subs:[String] = ["sub1","sub2","sub3"]
     
     let titles:[String] = ["First", "Second"]
-
+    let colors:[UIColor] = [.red, .green, .blue]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +37,8 @@ class TableVC: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
         cell.detailTextLabel?.text = subs[indexPath.row]
-        cell.imageView?.image = UIImage(named: "roger")
+        cell.imageView?.image = UIImage(named: "roger")?.withRenderingMode(.alwaysTemplate)
+        cell.imageView?.tintColor = colors[indexPath.row]
         return cell
     }
     
