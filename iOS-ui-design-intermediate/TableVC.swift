@@ -13,7 +13,7 @@ class TableVC: UIViewController, UITableViewDataSource {
     let data:[[String]] = [["item1", "item2", "item3"],
                            ["item A", "item B", "item B", "itemD"]
     ]
-    
+    let titles:[String] = ["First", "Second"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,9 @@ class TableVC: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return titles[section]
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].count
     }
