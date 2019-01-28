@@ -166,10 +166,38 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v0d-RS-nF7"/>
                     </view>
+                    <connections>
+                        <segue destination="iwj-QO-HGM" kind="show" identifier="showDetail" id="s0K-oo-b2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaI-26-66J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-770.39999999999998" y="1069.1154422788607"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9IH-c9-eu7">
+            <objects>
+                <viewController id="iwj-QO-HGM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mpY-Fb-J0O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ss-NG-ey7">
+                                <rect key="frame" x="81" y="102" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="LxT-l8-Cy1" kind="show" id="yCh-yp-5sd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ps3-n5-VYF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhr-vH-PjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="1782"/>
         </scene>
         <!--WebVC-->
         <scene sceneID="yIp-4a-hUI">
@@ -293,4 +321,8 @@
         <image name="Screen Shot 2019-01-25 at 10.53.59 AM" width="297" height="293.5"/>
         <image name="roger" width="1836" height="1836"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="s0K-oo-b2a"/>
+        <segue reference="yCh-yp-5sd"/>
+    </inferredMetricsTieBreakers>
 </document>
