@@ -39,8 +39,8 @@ class TableVC: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
         cell.detailTextLabel?.text = subs[indexPath.row]
-        cell.imageView?.image = UIImage(named: "roger")?.withRenderingMode(.alwaysTemplate)
-        cell.imageView?.tintColor = colors[indexPath.row]
+        cell.imageView?.image = UIImage(named: "roger")//? //.withRenderingMode(.alwaysTemplate)
+//        cell.imageView?.tintColor = colors[indexPath.row]
         return cell
     }
     
